@@ -1,14 +1,25 @@
 // import logo from './logo.svg';
 // import './App.css';
 
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import routing components
+
 import Home from './components/Home';
+import PostPage from './components/post';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-     
-      <Home />
-    </div>
+   
+    <Router>
+      <div className="App">
+      <Header/>
+        <Routes>
+          <Route path="/" element={<Home/>} /> {/* Route for "/post" */}
+          <Route path="/post" element={<PostPage/>} /> {/* Route for "/post" */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,12 +1,12 @@
 
-import React,{useState} from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import "./Home.css";
 import owner from "../Images/owner-properties.webp";
 import fur from "../Images/furnished-properties.webp";
 import ver from "../Images/verified-properties.webp";
 import imm from "../Images/immediately-available.webp";
 import project from "../Images/projectshowcase-img.jpg";
-import Logo from "../Images/mb-logo-web-white.svg";
+
 import project2 from "../Images/projectshowcase-img(1).jpg";
 import kolkata from '../Images/kolkata.jpg'
 import kolkata1 from '../Images/kolkata4.jpg'
@@ -21,9 +21,14 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 import { MdHome } from "react-icons/md";
 import { TbCoinRupeeFilled } from "react-icons/tb";
+import Header from './Header';
+
+
 const Home = () => {
+ 
 
   const [openDropdown, setOpenDropdown] = useState(null);
+
 
   const handleMouseEnter = (dropdownId) => {
     setOpenDropdown(dropdownId);
@@ -33,104 +38,19 @@ const Home = () => {
     setOpenDropdown(null);
   };
   
+
+
+  
+
+ 
+  
   return (
     <div>
     {/*Main Header Section */}
-    <header>
-    <div className="container">
-      <div className="headerleft">
-        <a href="" className="sLogo">
-          <img src={Logo} alt="Magicbricks Logo" />
-        </a>
-        <div className="header-menu-wrap">
-          <a className="header-menu-link" href="#">
-            Kolkata
-          </a>
-        </div>
-      </div>
-      <div className="headerright">
-        <div className="header-menu-wrap">
-          <a className="header-menu-link" href="#">
-            MB Prime
-          </a>
-          <div className="header__main__dropdown">
-            <div className="prime__block">
-              <div>
-                <span className="prime__block__icn"></span>
-              </div>
-              <div className="prime__block__heading">
-                Introducing <span className="bold">MB</span>{' '}
-                <span className="c-gold-900 bold">Prime</span>
-              </div>
-              <div className="prime__block__text">
-                Pay Zero Commission | Save Time &amp; Money
-              </div>
-            </div>
-            <ul className="prime__features">
-              <li>Contact upto 30 Owners directly</li>
-              <li>Access to Prime Exclusive Properties</li>
-            </ul>
-            <div>
-              <a href="#" className="prime-cta">
-                Join Now
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="header-menu-wrap">
-          <a className="header-menu-link" href="#">
-            Login
-          </a>
-          <div className="header__main__dropdown">
-            <div className="login__box">
-              <div className="login__divider">
-                <span className="login__divider__label">My Activity</span>
-              </div>
-              <ul className="login__drop-links">
-                <li id="contactedId">
-                  <a href="#">
-                    Requested Properties <span className="badge">New</span>
-                  </a>
-                </li>
-                <li id="contactedId">
-                  <a href="#">Contacted Properties</a>
-                </li>
-                <li id="viewedId">
-                  <a href="#">Viewed Properties</a>
-                </li>
-                <li>
-                  <a href="#">Shortlisted Properties</a>
-                </li>
-                <li id="searchedId">
-                  <a href="#">Searches</a>
-                </li>
-              </ul>
-              <div className="login__divider"></div>
-              <ul className="login__drop-links">
-                <li>
-                  <a href="#">Recommendations</a>
-                </li>
-                <li>
-                  <a href="#">My Profile</a>
-                </li>
-              </ul>
-            </div>
-            <div className="login__box signup-box">
-              <a href="#" className="login__drop-cta">
-                Login
-              </a>
-              <div className="login__drop-text-2">
-                New to Magicbricks? <a href="#">Sign Up</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="header-postproperty">
-          <a href="#">Post Property<span className="badge">FREE</span></a>
-        </div>
-      </div>
-    </div>
-  </header>
+   
+  <Header/>
+
+  
    {/*sub Header Section */}
   <div className='nav-main'>
   <nav className='nav'>
