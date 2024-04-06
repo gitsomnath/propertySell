@@ -1,6 +1,7 @@
 import React from 'react'
 import { RxArrowTopRight } from "react-icons/rx";
 import { useNavigate } from 'react-router-dom';
+
 const SignUp = () => {
     
     const navigate = useNavigate(); 
@@ -10,6 +11,7 @@ const SignUp = () => {
       };
     
     return (
+        <>
         <div className='h-[700px] flex'>
 
             <div className='w-[35%] bg-slate-500'>
@@ -73,6 +75,9 @@ const SignUp = () => {
             </div>
 
         </div>
+      
+        </>
+        
     )
 }
 
