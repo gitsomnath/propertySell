@@ -20,7 +20,11 @@ function App() {
           <Route path="/" element={<Home/>} /> {/* Route for "/post" */}
           <Route path="/login" element={<LoginPage/>} /> {/* Route for "/post" */}
           <Route path="/post" element={<PostPage/>} /> {/* Route for "/post" */}
-          <Route path="/sign_up" element={<SignUp/>} />
+          <Route path="/sign-up" element={<SignUp/>} />
+          <Route path="/kolkata" element={<Home/>} />
+        <Route path="/bangalore" element={<Home/>} />
+        <Route path="/chennai" element={<Home/>} />
+        <Route path="/mumbai" element={<Home/>} />
         </Routes>
       </div>
     </Router>

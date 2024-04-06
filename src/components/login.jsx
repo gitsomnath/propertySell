@@ -2,7 +2,15 @@ import React, { useState } from 'react';
 import "../style/Home.css";
 import Laptop from "../Images/pp-hero-web.png";
 import { RxArrowTopRight } from "react-icons/rx";
+import { useNavigate } from 'react-router-dom';
+import Header from '../common/Header';
 function LoginPage() {
+    const navigate = useNavigate(); 
+    const redirectToSignUp = () => {
+    
+        navigate('/sign-up'); // Navigate to the "/post" route
+      };
+    
 
 
     return (
@@ -41,9 +49,7 @@ function LoginPage() {
         // </div>
 
         <div>
-            <header className='bg-[#009681]'>
-                <img src='' />
-            </header>
+            <Header/>
             <div className='h-[700px] flex'>
                      
                 <div className='w-[35%] bg-slate-500'>
@@ -58,8 +64,8 @@ function LoginPage() {
                         <p className="text-[#AFBCBE] flex items-center"><RxArrowTopRight />Add detailed property information & multiple photos per listing</p>
                     </div>
                 </div>
-                <div className='w-[65%] bg-[#f1eaea] flex justify-center pt-10 text-start'>
-                    <div className='h-[80%] w-[33%] bg-white rounded-md'>
+                <div className='w-[95%] bg-[#f1eaea] flex justify-center pt-10 text-start'>
+                    <div className='h-[80%] w-[40%] bg-white rounded-md'>
                         <div className='flex flex-col justify-between h-[60%]  mb-10 pb-10 p-6'>
                          <p className='font-bold text-lg'>Login</p>
                          <div className=''>
@@ -71,7 +77,7 @@ function LoginPage() {
                          </div>
                          </div>
                          <div className='h-[40%] bg-[#F7F7F7] rounded-b-md'>
-                         <p className='text-center pt-16'>New to Magicbricks? <button className='text-[#009681]'>Sign Up</button></p>
+                         <p className='text-center pt-16'>New to Magicbricks? <button className='text-[#009681]' onClick={redirectToSignUp}>Sign Up</button></p>
                          </div>
                     </div>
                 </div>

@@ -1,6 +1,14 @@
 import React from 'react'
 import { RxArrowTopRight } from "react-icons/rx";
+import { useNavigate } from 'react-router-dom';
 const SignUp = () => {
+    
+    const navigate = useNavigate(); 
+    const redirectToLogin = () => {
+    
+        navigate('/login'); // Navigate to the "/post" route
+      };
+    
     return (
         <div className='h-[700px] flex'>
 
@@ -16,8 +24,8 @@ const SignUp = () => {
                     <p className="text-[#AFBCBE] flex items-center"><RxArrowTopRight />Add detailed property information & multiple photos per listing</p>
                 </div>
             </div>
-            <div className='w-[65%] bg-slate-900 flex justify-center pt-10 text-start'>
-                <div className='h-[80%] w-[33%] bg-white rounded-md  '>
+            <div className='w-[95%] bg-slate-900 flex justify-center pt-10 text-start'>
+                <div className='h-[80%] w-[40%] bg-white rounded-md  '>
                     <div className='flex flex-col justify-between mb-10 pb-10 p-6 h-[100%]'>
                         <p className='font-bold text-lg'>Sign Up</p>
                         <div>
@@ -54,10 +62,10 @@ const SignUp = () => {
                             <p>I agree to Magicbricks T&C, Privacy Policy, & Cookie Policy</p>
                         </div>
                         <div>
-                            <button className='w-full p-2 bg-[#009681] text-white rounded-md'>Sign Up</button>
+                            <button className='w-full p-2 bg-[#009681] text-white rounded-md' >Sign Up</button>
                         </div>
                         <div className='  '>
-                            <p className='text-center '>Already Registered? <button className='text-[#009681]'>Login Now</button></p>
+                            <p className='text-center '>Already Registered? <button className='text-[#009681]' onClick={redirectToLogin}>Login Now</button></p>
                         </div>
                     </div>
 

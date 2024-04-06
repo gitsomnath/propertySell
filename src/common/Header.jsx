@@ -1,9 +1,18 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Logo from "../Images/logo.png";
 import { useNavigate } from 'react-router-dom'; 
+import { useLocation } from 'react-router-dom'; 
 
 function Header() {
     const navigate = useNavigate(); 
+    const location = useLocation();
+   
+
+   
+    const isHomePage = location.pathname === '/';
+    const isLoginPage = location.pathname === '/login';
+    const isSignupPage = location.pathname === '/sign-up';
+
     const redirectToPost = () => {
     
         navigate('/post'); // Navigate to the "/post" route
@@ -12,29 +21,42 @@ function Header() {
     
         navigate('/login');
       };
-      const redirectedToHome = () => {
-        navigate('/'); 
-      };
-      const handleRedirect=()=>{
-        navigate('/')
-        window.location.href = '/';
-      }
+      const handleLogoClick = (e) => {
+        e.preventDefault();
+        navigate('/');
+       
+  
+    };
+    const [selectedCity, setSelectedCity] = useState('');
+
+    const handleCityChange = (event) => {
+        const selectedValue = event.target.value;
+        setSelectedCity(selectedValue);
+        navigate(`/${selectedValue.toLowerCase()}`);
+    };
   return (
     <header>
     <div className="container">
-      <div className="headerleft flex justify-between items-center">
-        <a href="" onClick={redirectedToHome} className="sLogo">
-          <img src={Logo} alt="propertySell Logo" />
+      <div className="headerleft flex justify-between items-center" >
+      
+        <a href="" className="sLogo" onClick={handleLogoClick}>
+            <img src={Logo} alt="propertySell Logo" />
         </a>
+        {!isLoginPage && (
+        
+        
         <div className="">
-          <select  className=" outline-none border-0 text-white bg-[#009681]" href="#" onChange={handleRedirect}>
-          <option value="">Kolkata</option>
-            <option value="">Bangalore</option>
-            <option value="">chennai</option>
-            <option value="">Mumbai</option>
+          <select  className=" outline-none border-0 text-white bg-[#009681]" href="#" value={selectedCity} onChange={handleCityChange} >
+         
+          <option value="Kolkata">Kolkata</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Mumbai">Mumbai</option>
           </select>
         </div>
+        )}
       </div>
+      {!isLoginPage && (
       <div className="headerright">
         <div className="header-menu-wrap">
           {/* <a className="header-menu-link" href="#">
@@ -65,7 +87,7 @@ function Header() {
           </div>
         </div>
         <div className="header-menu-wrap">
-          <a className="header-menu-link" onClick={redirectToLogin}>
+          <a className="header-menu-linkLogin" onClick={redirectToLogin}>
             Login
           </a>
           <div className="header__main__dropdown">
@@ -115,7 +137,10 @@ function Header() {
         <div className="header-postproperty" onClick={redirectToPost}>
           <a href="#">Post Property<span className="badge">FREE</span></a>
         </div>
+  
       </div>
+        )}
+      
     </div>
   </header>
   );

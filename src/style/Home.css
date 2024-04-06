@@ -157,6 +157,30 @@ header{width: 100%; height: 48px; background-color: #15a990; position: fixed; to
     border: solid 1px #d7d7d7;
     border-bottom-color: #fff;
   }
+.header-menu-linkLogin{
+  color: #fff; font-size: 14px; line-height: 47px;
+  text-decoration: none;
+  padding: 0 32px 0 16px;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 170px;
+  border: #009681  solid 1px;
+  border-bottom: none;
+  border-radius: 8px 8px 0px 0px;}
+  .header-menu-linkLogin:hover{
+    background-color: #fff;
+    color: #009681 ;
+    border-radius: 8px 8px 0px 0px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 1px #d7d7d7;
+    border-bottom-color: #fff;
+  }
 .header-menu-link:after {
   content: '';
   width: 10px;
