@@ -49,9 +49,12 @@ function Header() {
           <select  className=" outline-none border-0 text-white bg-[#009681]" href="#" value={selectedCity} onChange={handleCityChange} >
          
           <option value="Kolkata">Kolkata</option>
-          <option value="Bangalore">Bangalore</option>
-          <option value="Chennai">Chennai</option>
-          <option value="Mumbai">Mumbai</option>
+          <option value="Kharagpur">Kharagpur</option>
+          <option value="Asansol">Asansol</option>
+          <option value="Haldia">Haldia</option>
+          <option value="Siliguri">Siliguri</option>
+          <option value="Howrah">Howrah</option>
+          <option value="Burdwan">Burdwan</option>
           </select>
         </div>
         )}
