@@ -12,11 +12,14 @@ function Header() {
     
         navigate('/login');
       };
+      const redirectedToHome = () => {
+        navigate('/'); 
+      };
   return (
     <header>
     <div className="container">
       <div className="headerleft">
-        <a href="" className="sLogo">
+        <a href="" onClick={redirectedToHome} className="sLogo">
           <img src={Logo} alt="propertySell Logo" />
         </a>
         <div className="header-menu-wrap">

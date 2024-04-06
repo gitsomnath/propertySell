@@ -8,6 +8,7 @@ import Home from './components/Home';
 import PostPage from './components/post';
 import LoginPage from './components/login';
 import Header from './common/Header';
+import SignUp from './components/SignUp';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home/>} /> {/* Route for "/post" */}
           <Route path="/login" element={<LoginPage/>} /> {/* Route for "/post" */}
           <Route path="/post" element={<PostPage/>} /> {/* Route for "/post" */}
+          <Route path="/sign_up" element={<SignUp/>} />
         </Routes>
       </div>
     </Router>
