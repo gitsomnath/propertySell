@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 import Home from './components/Home';
 import PostPage from './components/post';
 import LoginPage from './components/login';
-import Header from './components/Header';
+import Header from './common/Header';
 
 function App() {
   return (

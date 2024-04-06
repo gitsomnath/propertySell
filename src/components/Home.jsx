@@ -1,6 +1,6 @@
 
 import React,{useState,useEffect,useRef} from 'react';
-import "./Home.css";
+import "../style/Home.css";
 import owner from "../Images/flatImage1.jpg";
 import fur from "../Images/flatImage2.jpg";
 import ver from "../Images/flatImage3.jpg";
@@ -21,7 +21,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 import { MdHome } from "react-icons/md";
 import { TbCoinRupeeFilled } from "react-icons/tb";
-import Header from './Header';
+import Header from '../common/Header';
 
 
 const Home = () => {

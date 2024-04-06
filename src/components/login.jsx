@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./Home.css";
+import "../style/Home.css";
 import Laptop from "../Images/pp-hero-web.png";
 
 function LoginPage() {
