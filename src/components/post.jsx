@@ -32,7 +32,7 @@ function PostPage() {
         <p>You are:</p>
          
         <div  >
-          <select style={{ width: "70%", height: "40px" }}>
+          <select style={{ width: "90%", height: "40px","border": "none !important;" }}>
             <option value="owner">Owner</option>
             <option value="agent">Agent</option>
             <option value="builder">Builder</option>
@@ -41,20 +41,20 @@ function PostPage() {
      
         <p>You are here to:</p>
         <div>
-          <select style={{ width: "70%", height: "40px" }}>
+          <select style={{ width: "90%", height: "40px" }}>
             <option value="sell">Sell</option>
-            <option value="rent">Rent/Lease</option>
-            <option value="pg">List as PG</option>
+            <option value="rent">Buy</option>
+            {/* <option value="pg">List as PG</option> */}
           </select>
         </div>
       
         <p>Your contact number</p>
         <div>
-          <select  className='number-select'>
+          <select  style={{height: "40px" }}  className='number-select'>
             <option value="india">+91</option>
             <option value="us">+1</option>
           </select>
-          <input className='number-input' type="number" placeholder="Whastsapp Number" />
+          <input style={{ width: "72%","margin-left":"5px", height: "40px" }} className='number-input' type="number" placeholder="Whastsapp Number" />
         </div>
         &nbsp;
         <p className="whatsapp-text">WhatsApp Number (Enter your WhatsApp No. to get enquiries from Buyer/Tenant)</p>

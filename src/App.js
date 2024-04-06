@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 
 import Home from './components/Home';
 import PostPage from './components/post';
+import LoginPage from './components/login';
 import Header from './components/Header';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Header/>
         <Routes>
           <Route path="/" element={<Home/>} /> {/* Route for "/post" */}
+          <Route path="/login" element={<LoginPage/>} /> {/* Route for "/post" */}
           <Route path="/post" element={<PostPage/>} /> {/* Route for "/post" */}
         </Routes>
       </div>

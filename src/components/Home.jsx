@@ -67,9 +67,9 @@ const Home = () => {
       )}
     </div>
 
-    <div className="relative inline-block text-left">
+    {/* <div className="relative inline-block text-left">
       <a href="" onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={handleMouseLeave}>Rent <MdKeyboardArrowDown color='#D8232A' /></a>
-      {/* Dropdown content */}
+    
       {openDropdown === 2 && (
         <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <div className="py-1" role="none">
@@ -79,7 +79,7 @@ const Home = () => {
           </div>
         </div>
       )}
-    </div>
+    </div> */}
 
     <div className="relative inline-block text-left">
       <a href="" onMouseEnter={() => handleMouseEnter(3)} onMouseLeave={handleMouseLeave}>Sell <MdKeyboardArrowDown color='#D8232A' /></a>
@@ -95,9 +95,9 @@ const Home = () => {
       )}
     </div>
 
-    <div className="relative inline-block text-left">
+    {/* <div className="relative inline-block text-left">
       <a href="" onMouseEnter={() => handleMouseEnter(4)} onMouseLeave={handleMouseLeave}>Home Loans <MdKeyboardArrowDown color='#D8232A' /></a>
-      {/* Dropdown content */}
+      
       {openDropdown === 4 && (
         <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <div className="py-1" role="none">
@@ -107,7 +107,7 @@ const Home = () => {
           </div>
         </div>
       )}
-    </div>
+    </div> */}
 
     <div className="relative inline-block text-left">
       <a href="" onMouseEnter={() => handleMouseEnter(5)} onMouseLeave={handleMouseLeave}>Property Services <MdKeyboardArrowDown color='#D8232A' /></a>
@@ -123,9 +123,9 @@ const Home = () => {
       )}
     </div>
 
-    <div className="relative inline-block text-left">
+    {/* <div className="relative inline-block text-left">
       <a href="" onMouseEnter={() => handleMouseEnter(6)} onMouseLeave={handleMouseLeave}>MB Advice <MdKeyboardArrowDown color='#D8232A' /></a>
-      {/* Dropdown content */}
+    
       {openDropdown === 6 && (
         <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <div className="py-1" role="none">
@@ -135,7 +135,7 @@ const Home = () => {
           </div>
         </div>
       )}
-    </div>
+    </div> */}
 
     <div className="relative inline-block text-left">
       <a href="" onMouseEnter={()=>handleMouseEnter(7)} onMouseLeave={handleMouseLeave}>Help <MdKeyboardArrowDown color='#D8232A' /></a>
@@ -170,32 +170,35 @@ const Home = () => {
         <div className='w-[70%] flex justify-between items-center border-[1px] border-[#909090] h-14 rounded-full p-2'>
           <div className='flex items-center w-[30%] justify-evenly h-8 border-r border-[#D7D7D7]'>
             <p><IoLocation color='red'/></p>
-            <p className='bg-[#FBE9E9] rounded-full px-3 py-1' >kolkata</p>
-            <input type="text" className="outline-none w-[60%]" placeholder='Add more..' />
+            {/* <p className='bg-[#FBE9E9] rounded-full px-3 py-1' >kolkata</p> */}
+            <input type="text" className="outline-none w-[60%]" placeholder='Your address..' />
           </div>
           <div className='flex justify-evenly w-[20%] items-center h-8 text-start border-r border-[#D7D7D7]'>
             <p><MdHome color="red"/></p>
-            <p>Flat +1</p>
+            {/* <p>Flat +1</p> */}
             <div>
               <select className='outline-none'>
-                <option ></option>
-                <option>Flat-1</option>
+                <option defaultValue={"Residential"}>Residential</option>
+                <option>Commmercial</option>
               </select>
             </div>
 
           </div>
           <div className='flex justify-around w-[20%] items-center h-8 text-start'>
             <p><TbCoinRupeeFilled color='red' /></p>
-            <p>Budget</p>
+            {/* <p>Budget</p> */}
             <div>
               <select className='outline-none'>
-                <option ></option>
-                <option >Budget</option>
+                <option defaultValue={"Budget"}>Budget</option>
+                <option >₹2 Lac</option>
+                <option >₹3 Lac</option>
+                <option >₹5 Lac</option>
+                <option >₹10 Lac</option>
               </select>
             </div>
           </div>
           <div>
-            <button className='bg-[#D8232A] text-white px-8 py-2 rounded-full items-center flex justify-evenly'>
+            <button className='bg-[#4eaea2] text-white px-8 py-2 rounded-full items-center flex justify-evenly'>
               <p><BiSearchAlt/></p>
               <p>search</p>
               </button>
@@ -344,14 +347,14 @@ const Home = () => {
 
 
 
-      <div style={{ display: 'flex', justifyContent: "center" }}>
+      {/* <div style={{ display: 'flex', justifyContent: "center" }}>
         <div className='w-[90%] flex justify-between'>
           <p className='text-start  mt-10 mb-10 text-3xl text-[#363636]'>MB Preferred Agents in Kolkata </p>
           <p className='mt-10 mb-10 text-sm flex items-center text-red-500'>See all <IoIosArrowRoundForward /></p>
         </div>
-      </div>
+      </div> */}
 
-      <section className='flex justify-center'>
+      {/* <section className='flex justify-center'>
         <div className='w-[90%] grid grid-cols-4 gap-3'>
 
 
@@ -453,7 +456,7 @@ const Home = () => {
           </div>
 
         </div>
-      </section >
+      </section > */}
 
 
 
@@ -576,10 +579,10 @@ const Home = () => {
           <div className='grid grid-cols-2 w-[90%] text-start gap-x-20 gap-y-8'>
             <div className='pb-2 '>
               <p className='font-bold text-xl pb-2'>
-                About Magicbricks
+                About propertySell
               </p>
               <p className='pt-2 text-[#363636]'>
-                Magicbricks is a full stack service provider for all real estate needs, with 15+ services including home loans, pay rent, packers and movers, legal assistance, property valuation, and expert advice. As the largest platform for buyers and sellers of property to connect in a transparent manner, Magicbricks has an active base of over 15 lakh property listings.
+                propertySell is a full stack service provider for all real estate needs, with 15+ services including home loans, pay rent, packers and movers, legal assistance, property valuation, and expert advice. As the largest platform for buyers and sellers of property to connect in a transparent manner, propertySell has an active base of over 15 lakh property listings.
               </p>
             </div>
 
@@ -589,7 +592,7 @@ const Home = () => {
               <p className='text-[#363636]'>Property in New Delhi Property in Mumbai Property in Chennai Property in Pune Property in Noida Property in Gurgaon Property in Bangalore Property in Ahmedabad</p>
             </div>
 
-            <div>
+            {/* <div>
               <p className='font-bold text-xl pb-5'>More from our Network</p>
               <div className='grid grid-cols-4 gap-1 text-sm foot text-[#363636]'>
                 <p>Times of India</p>
@@ -609,12 +612,12 @@ const Home = () => {
             <div >
               <p className='font-bold text-xl pb-5'>New Projects in India</p>
               <p className='text-[#363636]'>New Projects in New Delhi New Projects in Mumbai New Projects in Chennai New Projects in Pune New Projects in Noida New Projects in Gurgaon New Projects in Bangalore New Projects in Ahmedabad</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
 
-        <div className='flex justify-center bg-[#E8E8E8] h-14 items-center'>
+        {/* <div className='flex justify-center bg-[#E8E8E8] h-14 items-center'>
           <div className='w-[90%] flex justify-between cursor-pointer '>
             <p>Sitemap </p>
             <p>Terms & Conditions </p>
@@ -632,11 +635,11 @@ const Home = () => {
           </div>
         </div>
         <div className='flex justify-center'>
-          <p className='w-[60%] text-start text-[#363636] pt-6 pb-6 text-sm'>Disclaimer: Magicbricks Realty Services Limited is only an intermediary offering its platform to advertise properties of Seller for a Customer/Buyer/User coming on its Website and is not and cannot be a party to or privy to or control in any manner any transactions between the Seller and the Customer/Buyer/User. All the offers and discounts on this Website have been extended by Read more</p>
-        </div>
+          <p className='w-[60%] text-start text-[#363636] pt-6 pb-6 text-sm'>Disclaimer: propertySell Realty Services Limited is only an intermediary offering its platform to advertise properties of Seller for a Customer/Buyer/User coming on its Website and is not and cannot be a party to or privy to or control in any manner any transactions between the Seller and the Customer/Buyer/User. All the offers and discounts on this Website have been extended by Read more</p>
+        </div> */}
         <div className='flex justify-center bg-[#303030]'>
           <p className='text-sm text-white pt-6 pb-6 text-start w-[60%]'>
-            All trademarks, logos and names are properties of their respective owners. All Rights Reserved. © Copyright 2024 Magicbricks Realty Services Limited.
+            All trademarks, logos and names are properties of their respective owners. All Rights Reserved. © Copyright 2024 propertySell Realty Services Limited.
           </p>
         </div>
       </footer>

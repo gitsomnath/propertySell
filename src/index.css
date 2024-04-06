@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.bg-red-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(28, 174, 162);
+}
+.nav {
+    width: 34% !important;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.nav a {
+    text-decoration: none;
+    font-size: 16px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 10%; */
+}
+select{
+    border: none !important;
+    border-bottom:1px solid #ccc !important;
+}
+input{
+    border: none !important;
+    border-bottom:1px solid #ccc !important;
+}

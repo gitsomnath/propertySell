@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from "../Images/mb-logo-web-white.svg";
+import Logo from "../Images/logo.png";
 import { useNavigate } from 'react-router-dom'; 
 
 function Header() {
@@ -8,12 +8,16 @@ function Header() {
     
         navigate('/post'); // Navigate to the "/post" route
       };
+      const redirectToLogin = () => {
+    
+        navigate('/login');
+      };
   return (
     <header>
     <div className="container">
       <div className="headerleft">
         <a href="" className="sLogo">
-          <img src={Logo} alt="Magicbricks Logo" />
+          <img src={Logo} alt="propertySell Logo" />
         </a>
         <div className="header-menu-wrap">
           <a className="header-menu-link" href="#">
@@ -23,9 +27,9 @@ function Header() {
       </div>
       <div className="headerright">
         <div className="header-menu-wrap">
-          <a className="header-menu-link" href="#">
+          {/* <a className="header-menu-link" href="#">
             MB Prime
-          </a>
+          </a> */}
           <div className="header__main__dropdown">
             <div className="prime__block">
               <div>
@@ -51,7 +55,7 @@ function Header() {
           </div>
         </div>
         <div className="header-menu-wrap">
-          <a className="header-menu-link" href="#">
+          <a className="header-menu-link" onClick={redirectToLogin}>
             Login
           </a>
           <div className="header__main__dropdown">
@@ -88,12 +92,12 @@ function Header() {
                 </li>
               </ul>
             </div>
-            <div className="login__box signup-box">
+            <div className="login__box signup-box" onClick={redirectToLogin}>
               <a href="#" className="login__drop-cta">
                 Login
               </a>
-              <div className="login__drop-text-2">
-                New to Magicbricks? <a href="#">Sign Up</a>
+              <div className="login__drop-text-2" onClick={redirectToLogin}>
+                New to propertySell? <a href="#">Sign Up</a>
               </div>
             </div>
           </div>
