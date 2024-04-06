@@ -1,10 +1,10 @@
 
 import React,{useState,useEffect,useRef} from 'react';
 import "./Home.css";
-import owner from "../Images/owner-properties.webp";
-import fur from "../Images/furnished-properties.webp";
-import ver from "../Images/verified-properties.webp";
-import imm from "../Images/immediately-available.webp";
+import owner from "../Images/flatImage1.jpg";
+import fur from "../Images/flatImage2.jpg";
+import ver from "../Images/flatImage3.jpg";
+import imm from "../Images/flatImage4.jpg";
 import project from "../Images/projectshowcase-img.jpg";
 
 import project2 from "../Images/projectshowcase-img(1).jpg";
