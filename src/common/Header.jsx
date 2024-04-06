@@ -15,17 +15,24 @@ function Header() {
       const redirectedToHome = () => {
         navigate('/'); 
       };
+      const handleRedirect=()=>{
+        navigate('/')
+        window.location.href = '/';
+      }
   return (
     <header>
     <div className="container">
-      <div className="headerleft">
+      <div className="headerleft flex justify-between items-center">
         <a href="" onClick={redirectedToHome} className="sLogo">
           <img src={Logo} alt="propertySell Logo" />
         </a>
-        <div className="header-menu-wrap">
-          <a className="header-menu-link" href="#">
-            Kolkata
-          </a>
+        <div className="">
+          <select  className=" outline-none border-0 text-white bg-[#009681]" href="#" onChange={handleRedirect}>
+          <option value="">Kolkata</option>
+            <option value="">Bangalore</option>
+            <option value="">chennai</option>
+            <option value="">Mumbai</option>
+          </select>
         </div>
       </div>
       <div className="headerright">
